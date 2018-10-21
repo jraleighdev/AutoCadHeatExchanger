@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoCadHeatExchanger
+namespace AutoCadHeatExchanger.Geometry
 {
-    public class Class1
+    public enum AxisOrientationEnum
     {
+        Greater = 1,
+        Same = 2,
+        Less = 3
     }
 }
