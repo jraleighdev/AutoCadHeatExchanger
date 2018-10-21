@@ -175,20 +175,15 @@ namespace AutoCadHeatExchanger.Models.HModel
 
         private void Load()
         {
-            using (var context = new EngineeringContext())
-            {
-                Job j = context.Jobs.FirstOrDefault(x => x.JobNumber == 40017);
+            
 
-                Horizontal h = context.Horizontals.FirstOrDefault(x => x.JobId == j.Id);
+            NumberOfFans = 3;
+            TubeLength = 720;
+            PlenumDepth = 30;
+            DriveClearance = 30;
+            DistanceUnderFan = 80;
+            FanDiameter = 156;
 
-                NumberOfFans = h.FanQty;
-                TubeLength = j.TubeLength;
-                PlenumDepth = h.PlenumDepth;
-                DriveClearance = h.DriveClearance;
-                DistanceUnderFan = h.DistanceUnderFan;
-                
-                FanDiameter = j.FanSize;
-            }
         }
     }
 }
